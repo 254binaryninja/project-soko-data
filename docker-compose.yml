@@ -1,13 +1,26 @@
 
+
 services:
+  # Redis for storing stock price streams
   redis:
     image: redis:latest
-    container_name: soko-data-redis
+    container_name: nse-redis
     restart: unless-stopped
     ports:
       - "6379:6379"
     volumes:
       - redis_data:/data
+
+  # NSE Stock Price Scraper
+  nse-scraper:
+    build: ./python-scrapper
+    container_name: nse-scraper
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - LOG_LEVEL=INFO
+    depends_on:
+      - redis
+    restart: unless-stopped
 
 volumes:
   redis_data:
