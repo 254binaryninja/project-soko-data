@@ -81,7 +81,7 @@ class TestRedisStreamer:
         # Test data with same price
         data = {"ABSA": (19.80, 0.00)}
         
-        streamer.publish_changes(data)
+        streamer.publish_changes(data) # type: ignore
         
         # Verify xadd was NOT called
         mock_redis_instance.xadd.assert_not_called()
@@ -109,7 +109,7 @@ class TestRedisStreamer:
         data = {"ABSA": (20.00, 0.20)}
         
         with patch('streamer.time.time', return_value=1642694400):
-            streamer.publish_changes(data)
+            streamer.publish_changes(data) # type: ignore
         
         # Verify xadd was called
         mock_redis_instance.xadd.assert_called_once()
@@ -141,7 +141,7 @@ class TestRedisStreamer:
         data = {"ABSA": (19.75, -0.05)}
         
         with patch('streamer.time.time', return_value=1642694400):
-            streamer.publish_changes(data)
+            streamer.publish_changes(data) # type: ignore
         
         # Check price change direction
         call_args = mock_redis_instance.xadd.call_args
@@ -170,7 +170,7 @@ class TestRedisStreamer:
         data = {"ABSA": (19.80, None)}
         
         with patch('streamer.time.time', return_value=1642694400):
-            streamer.publish_changes(data)
+            streamer.publish_changes(data) # type: ignore
         
         # Check that price_change fields are not included
         call_args = mock_redis_instance.xadd.call_args
