@@ -48,7 +48,7 @@ API service (planned) for:
 2. **Run the Python scraper**:
    ```bash
    cd python-scrapper
-   pip install -r requirements.txt
+   uv sync
    python main.py
    ```
 
@@ -66,8 +66,84 @@ API service (planned) for:
 
 ## Contributing
 
-[Add contribution guidelines here]
+We welcome contributions to Project Soko Data! Here's how you can help:
+
+### Getting Started
+
+1. **Fork the repository** on GitHub
+2. **Clone your fork** locally:
+   ```bash
+   git clone https://github.com/your-username/project-soko-data.git
+   cd project-soko-data
+   ```
+3. **Set up the development environment**:
+   ```bash
+   cd python-scrapper
+   uv sync  # Install all dependencies including dev tools
+   ```
+
+### Development Workflow
+
+1. **Create a feature branch**:
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+
+2. **Make your changes** following our coding standards:
+   - Use type hints throughout your code
+   - Add comprehensive tests for new functionality
+   - Follow existing code style and patterns
+   - Update documentation as needed
+
+3. **Run tests** to ensure everything works:
+   ```bash
+   cd python-scrapper
+   uv run pytest -v # Run tests with coverage report
+   ```
+
+4. **Commit your changes**:
+   ```bash
+   git add .
+   git commit -m "feat: add your feature description"
+   ```
+
+5. **Push to your fork**:
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+
+6. **Create a Pull Request** on GitHub
+
+### Code Standards
+
+- **Python**: Follow PEP 8 style guidelines
+- **Type Hints**: All functions should have proper type annotations
+- **Testing**: Maintain >90% test coverage
+- **Documentation**: Update README and docstrings for new features
+- **Error Handling**: Include proper error handling and logging
+
+### Areas for Contribution
+
+- 🐛 **Bug fixes**: Check existing issues
+- ✨ **New features**: Parser improvements, additional data sources
+- 📚 **Documentation**: Improve existing docs or add examples
+- 🧪 **Testing**: Add more test cases or improve coverage
+- 🔧 **DevOps**: Docker setup, CI/CD improvements
+- 🚀 **Performance**: Optimization and efficiency improvements
+
+### Reporting Issues
+
+When reporting bugs or requesting features:
+- Use the GitHub issue tracker
+- Provide clear description and steps to reproduce
+- Include relevant logs and error messages
+- Specify your environment (Python version, OS, etc.)
+
+### Questions?
+
+Feel free to open an issue for discussion or reach out to the maintainers.
 
 ## License
 
-[Add license information here]
+[MIT License](LICENSE)
+
