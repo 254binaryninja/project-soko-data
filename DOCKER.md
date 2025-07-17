@@ -1,4 +1,4 @@
-# Simple Docker Setup Guide
+# Docker Setup Guide
 
 This guide shows how to run the NSE Scraper using Docker with `uv` package manager.
 
@@ -115,4 +115,4 @@ UV is a fast Python package manager that:
 - Works great with Docker
 - Uses lock files for reproducible builds
 
-That's it! Simple Docker setup for learning and development. 🎉
+That's it!
