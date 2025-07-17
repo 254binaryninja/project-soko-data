@@ -1,6 +1,6 @@
 # NSE Real-time Stock Price Scraper
 
-A Python application that scrapes real-time stock prices from the Nigeria Stock Exchange (NSE) and streams price changes to Redis for real-time consumption.
+A Python application that scrapes real-time stock prices from the Nairobi Stock Exchange (NSE) and streams price changes to Redis for real-time consumption.
 
 ## Overview
 
@@ -243,6 +243,3 @@ The codebase follows Python best practices:
    # Aim for >90% coverage
    ```
 
-## License
-
-[Add your license information here]

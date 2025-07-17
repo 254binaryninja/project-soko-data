@@ -1,6 +1,6 @@
 # Project Soko Data
 
-A real-time financial data processing system for the Nigeria Stock Exchange (NSE) with a Python scraper and Java API components.
+A real-time financial data processing system for the Nairobi Stock Exchange (NSE) with a Python scraper and Java API components.
 
 ## Project Structure
 
